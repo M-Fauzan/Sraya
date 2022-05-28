@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_protection">
+
+    <fragment
+        android:id="@+id/navigation_tell"
+        android:name="com.dicoding.fauzan.sraya.ui.tell.TellFragment"
+        android:label="@string/title_tell"
+        tools:layout="@layout/fragment_tell" />
+
+    <fragment
+        android:id="@+id/navigation_protection"
+        android:name="com.dicoding.fauzan.sraya.ui.protection.ProtectionFragment"
+        android:label="@string/title_protection"
+        tools:layout="@layout/fragment_protection" />
+
+    <fragment
+        android:id="@+id/navigation_report"
+        android:name="com.dicoding.fauzan.sraya.ui.report.ReportFragment"
+        android:label="@string/title_report"
+        tools:layout="@layout/fragment_report" />
+</navigation>

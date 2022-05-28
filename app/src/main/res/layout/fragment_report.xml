@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.tell.TellFragment">
+
+    <TextView
+        android:id="@+id/tv_report_where"
+        style="@style/FormTextView"
+        android:text="@string/form_report_where" />
+
+    <EditText
+        android:id="@+id/et_report_where"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_report_where"
+        android:maxLines="3"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_report_when"
+        style="@style/FormTextView"
+        android:text="@string/form_report_when"
+        android:layout_below="@id/et_report_where"
+        />
+
+    <EditText
+        android:id="@+id/et_report_when"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:layout_below="@id/tv_report_when"
+        />
+
+    <TextView
+        android:id="@+id/tv_report_how"
+        android:layout_below="@id/et_report_when"
+        style="@style/FormTextView"
+        android:text="@string/form_report_how"
+
+        />
+
+    <EditText
+        android:id="@+id/et_report_how"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_report_how"
+        android:maxLines="3"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_report_upload"
+        android:layout_below="@id/et_report_how"
+        style="@style/FormTextView"
+        android:text="@string/form_report_upload"
+        />
+    <Button
+        android:id="@+id/btn_report_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_report_upload"
+        android:text="+ Foto"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:id="@+id/btn_report_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/form_report_create"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        />
+</RelativeLayout>

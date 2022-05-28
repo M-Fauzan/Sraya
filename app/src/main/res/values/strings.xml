@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Sraya</string>
+
+    <string name="form_password">Password</string>
+    <string name="form_handphone">Nomor Handphone</string>
+    <string name="form_name">Nama</string>
+    <string name="form_email">Email</string>
+    <string name="form_contact">Kontak</string>
+
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_protection">Protection</string>
+    <string name="title_tell">Please Tell Me</string>
+    <string name="title_report">Report</string>
+    <string name="form_report_where">Di mana Anda mengalami kejadian tersebut?</string>
+    <string name="form_report_when">Kapan Anda mengalami kejadian tersebut?</string>
+    <string name="form_report_how">Bagaimana kronologinya?</string>
+    <string name="form_report_upload">Upload foto</string>
+    <string name="form_report_create">Buat laporan</string>
+</resources>
