@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.report.ReportFragment">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_tell_logo"
+        android:src="@drawable/logo_sraya"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_anchorGravity="bottom|start"
-        android:src="@drawable/ic_add_line"
-    />
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        android:layout_marginStart="16dp"
+        android:text="@string/title_activity_home"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/iv_tell_logo"
+        app:layout_constraintTop_toTopOf="@id/iv_tell_logo"
+        app:layout_constraintBottom_toBottomOf="@id/iv_tell_logo"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_tell_send"
+        style="@style/ChatButton"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:icon="@drawable/ic_send_plane_2_fill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_tell_add"
+        style="@style/ChatButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:icon="@drawable/ic_add_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:hintEnabled="false"
+        app:placeholderText="@string/hint_chat"
+        app:layout_constraintStart_toEndOf="@id/btn_tell_add"
+        app:layout_constraintEnd_toStartOf="@id/btn_tell_send"
+        app:layout_constraintTop_toTopOf="@id/btn_tell_send"
+        app:layout_constraintBottom_toBottomOf="@id/btn_tell_send"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

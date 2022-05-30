@@ -7,7 +7,7 @@
     <string name="form_email">Email</string>
     <string name="form_contact">Kontak</string>
 
-    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_home">Sraya</string>
     <string name="title_home">Home</string>
     <string name="title_protection">Protection</string>
     <string name="title_tell">Please Tell Me</string>
@@ -17,4 +17,13 @@
     <string name="form_report_how">Bagaimana kronologinya?</string>
     <string name="form_report_upload">Upload foto</string>
     <string name="form_report_create">Buat laporan</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="laporan_telah_dibuat">Laporan telah dibuat</string>
+    <string name="silahkan_ditunggu_kelanjutannya">Silahkan ditunggu kelanjutannya</string>
+    <string name="ditujukan_kepada">Ditujukan kepada:</string>
+    <string name="waktu">Waktu:</string>
+    <string name="keluhan">Keluhan:</string>
+    <string name="ok">Ok</string>
+    <string name="hint_chat">Ketik permasalahan Anda</string>
+    <string name="form_report_add_photo">+ Foto</string>
 </resources>

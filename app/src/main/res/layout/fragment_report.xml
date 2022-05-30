@@ -65,17 +65,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_report_upload"
-        android:text="+ Foto"
-        android:textColor="@color/black"
+        android:text="@string/form_report_add_photo"
         android:textAllCaps="false"
+        />
+    <ImageView
+        android:id="@+id/iv_report_photo"
+        android:src="@drawable/ic_baseline_image_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_report_upload"
+
         />
     <Button
         android:id="@+id/btn_report_create"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="@string/form_report_create"
-        android:textColor="@color/black"
         android:textAllCaps="false"
         />
 </RelativeLayout>
