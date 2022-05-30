@@ -10,5 +10,6 @@
     <color name="lime">#AAFF3F</color>
     <color name="dark_green">#66863E</color>
     <color name="gray">#C4C4C4</color>
-
+    <color name="green">#FF66863E</color>
+    <color name="aqua">#FF00FFFF</color>
 </resources>

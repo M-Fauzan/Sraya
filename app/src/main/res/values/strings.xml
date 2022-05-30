@@ -26,4 +26,28 @@
     <string name="ok">Ok</string>
     <string name="hint_chat">Ketik permasalahan Anda</string>
     <string name="form_report_add_photo">+ Foto</string>
+
+    <!-- Login and Register texts -->
+    <string name="login">Login</string>
+    <string name="image_login">Gambar Login</string>
+    <string name="no_handphone">No Handphone</string>
+    <string name="pass_hint">Text your password</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="login_ket">Belum punya akun ?</string>
+    <string name="min_length_char">Minimal Length %1$d characters</string>
+    <string name="invalid_phone">Format No Handphone tidak sesuai!</string>
+    <string name="email_hint">Masukan No Handphone</string>
+    <string name="register_ket">Sudah memiliki akun ?</string>
+    <string name="name">Nama</string>
+    <string name="name_hint">Masukan nama</string>
+    <string name="nik">NIK</string>
+    <string name="nik_hint">Masukkan NIK</string>
+    <string name="designed_by">Designed By Sraya_Team</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="masukkan_jenis_kelamin">masukkan jenis kelamin</string>
+    <string name="email">Email</string>
+    <string name="masukkan_email">masukkan email</string>
+    <string name="kontak">Kontak</string>
 </resources>

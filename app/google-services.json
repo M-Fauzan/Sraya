@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "783189318876",
+    "project_id": "sraya-2022",
+    "storage_bucket": "sraya-2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783189318876:android:50164b406b8c4b2aff6819",
+        "android_client_info": {
+          "package_name": "com.dicoding.fauzan.sraya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783189318876-spnm8q0jg9fv8oa6pepo9jqgl6cg86jn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dicoding.fauzan.sraya",
+            "certificate_hash": "9922eb4687ca1f582a70a135e5cdb4457546f099"
+          }
+        },
+        {
+          "client_id": "783189318876-ch978d8g3n1aq6e49mu4hk788g8cf7dp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0BEaJZsPZ0FJSfeuftsAhLK03p_Y58aM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783189318876-ch978d8g3n1aq6e49mu4hk788g8cf7dp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
