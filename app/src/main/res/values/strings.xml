@@ -50,4 +50,8 @@
     <string name="email">Email</string>
     <string name="masukkan_email">masukkan email</string>
     <string name="kontak">Kontak</string>
+    <string name="logout">Logout</string>
+    <string name="btnlogin">LOGIN</string>
+    <string name="ketlogin">Belum Memiliki Akun ?</string>
+
 </resources>

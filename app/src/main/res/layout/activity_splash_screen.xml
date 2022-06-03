@@ -10,7 +10,7 @@
         android:id="@+id/iv_splash"
         android:layout_width="413dp"
         android:layout_height="366dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="52dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,7 +22,7 @@
         android:layout_width="41dp"
         android:layout_height="41dp"
         android:layout_marginStart="181dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="182dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
@@ -33,12 +33,9 @@
         android:id="@+id/tv_design"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="177dp"
         android:text="@string/designed_by"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

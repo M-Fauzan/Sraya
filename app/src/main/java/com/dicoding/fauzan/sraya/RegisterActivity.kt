@@ -1,5 +1,6 @@
 package com.dicoding.fauzan.sraya
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.dicoding.fauzan.sraya.databinding.ActivityRegisterBinding
@@ -10,5 +11,16 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        supportActionBar?.hide()
+
+        setupAction()
+    }
+
+    private fun setupAction() {
+        binding.tvLogin.setOnClickListener{
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

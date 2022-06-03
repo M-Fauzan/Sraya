@@ -14,8 +14,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.work.*
+import com.dicoding.fauzan.sraya.MyWorker
 import com.dicoding.fauzan.sraya.R
 import com.dicoding.fauzan.sraya.databinding.FragmentProtectionBinding
 import com.google.android.gms.common.api.ResolvableApiException
@@ -26,18 +29,20 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.firebase.firestore.FirebaseFirestore
 import java.util.concurrent.TimeUnit
 
 class ProtectionFragment : Fragment(), OnMapReadyCallback {
 
-
+    private lateinit var workManger: WorkManager
+    private lateinit var periodicWorkRequest: PeriodicWorkRequest
     private lateinit var mMap: GoogleMap
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     private lateinit var locationRequest: LocationRequest
     private lateinit var locationCallback: LocationCallback
     private var isReady = false
     private var _binding: FragmentProtectionBinding? = null
-
+    private lateinit var database: FirebaseFirestore
     private var requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()) {
         when {
@@ -80,8 +85,56 @@ class ProtectionFragment : Fragment(), OnMapReadyCallback {
         val mapFragment = childFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        workManger = WorkManager.getInstance(requireActivity())
+
+        val data = Data.Builder()
+
+            .build()
+
+        val constraints = Constraints.Builder()
+            .setRequiredNetworkType(NetworkType.CONNECTED)
+            .build()
+
+        val periodicWorkRequest = PeriodicWorkRequest
+            .Builder(MyWorker::class.java, 15L, TimeUnit.MINUTES)
+            .setInputData(data)
+            .setConstraints(constraints)
+            .build()
+
+        workManger.enqueue(periodicWorkRequest)
+        workManger.getWorkInfoByIdLiveData(periodicWorkRequest.id).observe(
+            requireActivity()
+        ) {
+            if (it.state == WorkInfo.State.RUNNING) {
+
+            }
+        }
+        binding.btnProtectionProtect.setOnClickListener {
+            // TODO: Replace value with the corresponding data type from Firestore
+
+
+
+            val location = hashMapOf(
+                "GPS" to "0",
+                "Location" to "0",
+                "Time" to "0")
+            database.collection("SrayaData")
+                .document("location")
+                .set(location)
+                .addOnSuccessListener {
+                    Log.d(TAG, "Successfully added a document!")
+                }
+                .addOnFailureListener {
+                    Log.w(TAG, "An error occured", it)
+                }
+        }
+
+
         return binding.root
     }
+
+
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap

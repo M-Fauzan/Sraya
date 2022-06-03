@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +18,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.dicoding.fauzan.sraya.ReportDialogFragment
 import com.dicoding.fauzan.sraya.databinding.FragmentReportBinding
 import com.dicoding.fauzan.sraya.uriToFile
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class ReportFragment : Fragment() {
 
@@ -34,7 +39,7 @@ class ReportFragment : Fragment() {
         }
     }
     private var _binding: FragmentReportBinding? = null
-
+    private lateinit var database: FirebaseFirestore
     private val binding get() = _binding!!
 
 
@@ -50,7 +55,7 @@ class ReportFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+        database = Firebase.firestore
         binding.btnReportUpload.setOnClickListener {
             val intent = Intent()
             intent.action = Intent.ACTION_GET_CONTENT
@@ -59,8 +64,20 @@ class ReportFragment : Fragment() {
             launcherGallery.launch(chooser)
         }
         binding.btnReportCreate.setOnClickListener {
+            val report = hashMapOf(
+                "Kronologi" to binding.etReportHow.text.toString(),
+                "When" to binding.etReportWhen.text.toString(),
+                "Where" to binding.etReportWhere.text.toString())
             val reportDialogFragment = ReportDialogFragment()
             reportDialogFragment.show(childFragmentManager, ReportDialogFragment::class.java.simpleName)
+            database.collection("SrayaData")
+                .document("report")
+                .set(report)
+                .addOnSuccessListener {
+                Log.d(TAG, "Successfully added a document!")
+            }.addOnFailureListener {
+                Log.w(TAG, "An error occured", it)
+            }
         }
     }
     override fun onDestroyView() {
@@ -68,6 +85,9 @@ class ReportFragment : Fragment() {
         _binding = null
     }
 
+    companion object {
+        private val TAG = this::class.java.simpleName
+    }
 
 
 }

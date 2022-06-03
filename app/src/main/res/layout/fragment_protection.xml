@@ -14,6 +14,7 @@
         android:layout_height="match_parent"
         tools:context=".MapsFragment" />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_protection_protect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_anchor="@id/map"
@@ -21,5 +22,5 @@
         android:layout_marginBottom="16dp"
         android:src="@drawable/ic_shield_fill"
         android:backgroundTint="@color/lime"
-        />
+        android:contentDescription="Call a help" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

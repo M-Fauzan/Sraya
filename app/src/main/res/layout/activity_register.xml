@@ -22,7 +22,7 @@
             <ImageView
                 android:id="@+id/img_view"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="155dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
                 android:contentDescription="@string/image_login"
@@ -35,13 +35,12 @@
                 app:srcCompat="@drawable/sraya" />
 
             <TextView
-                android:id="@+id/tv_signup"
+                android:id="@+id/tv_register"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
-                android:alpha="0"
                 android:text="@string/register"
                 android:textAlignment="center"
                 android:textSize="30sp"
@@ -56,36 +55,35 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:alpha="0"
                 android:text="@string/nik"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/tv_signup"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_register"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/tv_signup"
-                app:layout_constraintTop_toBottomOf="@+id/tv_signup" />
+                app:layout_constraintStart_toStartOf="@+id/tv_register"
+                app:layout_constraintTop_toBottomOf="@+id/tv_register" />
 
             <EditText
                 android:id="@+id/edt_nik"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:alpha="0"
                 android:hint="@string/nik_hint"
-                app:layout_constraintEnd_toEndOf="@+id/tv_signup"
-                app:layout_constraintStart_toStartOf="@+id/tv_signup"
-                app:layout_constraintTop_toBottomOf="@id/tv_nik" />
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_register"
+                app:layout_constraintStart_toStartOf="@+id/tv_register"
+                app:layout_constraintTop_toBottomOf="@id/tv_nik"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/tv_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:alpha="0"
                 android:text="@string/name"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/tv_signup"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_register"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/tv_signup"
+                app:layout_constraintStart_toStartOf="@+id/tv_register"
                 app:layout_constraintTop_toBottomOf="@id/edt_nik" />
 
             <EditText
@@ -93,23 +91,23 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:alpha="0"
                 android:hint="@string/name_hint"
-                app:layout_constraintEnd_toEndOf="@+id/tv_signup"
-                app:layout_constraintStart_toStartOf="@+id/tv_signup"
-                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_register"
+                app:layout_constraintStart_toStartOf="@+id/tv_register"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/tv_tglahir"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:alpha="0"
                 android:text="@string/tanggal_lahir"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/tv_signup"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_register"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/tv_signup"
+                app:layout_constraintStart_toStartOf="@+id/tv_register"
                 app:layout_constraintTop_toBottomOf="@+id/edt_name" />
 
             <EditText
@@ -119,6 +117,7 @@
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="date"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@+id/tv_tglahir"
                 app:layout_constraintStart_toStartOf="@+id/tv_tglahir"
                 app:layout_constraintTop_toBottomOf="@+id/tv_tglahir"
@@ -129,12 +128,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:alpha="0"
                 android:text="@string/jenis_kelamin"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/tv_signup"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_register"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/tv_signup"
+                app:layout_constraintStart_toStartOf="@+id/tv_register"
                 app:layout_constraintTop_toBottomOf="@id/date_tglahir" />
 
             <EditText
@@ -143,8 +141,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:ems="10"
-                android:inputType="textPersonName"
                 android:hint="@string/masukkan_jenis_kelamin"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@+id/tv_jeniskelamin"
                 app:layout_constraintStart_toStartOf="@+id/tv_jeniskelamin"
                 app:layout_constraintTop_toBottomOf="@+id/tv_jeniskelamin"
@@ -155,12 +154,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:alpha="0"
                 android:text="@string/no_handphone"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/tv_signup"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_register"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/tv_signup"
+                app:layout_constraintStart_toStartOf="@+id/tv_register"
                 app:layout_constraintTop_toBottomOf="@id/edt_jeniskel" />
 
             <EditText
@@ -170,6 +168,7 @@
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="phone"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@+id/tv_nohp"
                 app:layout_constraintStart_toStartOf="@+id/tv_nohp"
                 app:layout_constraintTop_toBottomOf="@+id/tv_nohp" />
@@ -179,12 +178,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:alpha="0"
                 android:text="@string/email"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/tv_signup"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_register"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/tv_signup"
+                app:layout_constraintStart_toStartOf="@+id/tv_register"
                 app:layout_constraintTop_toBottomOf="@+id/edt_nohp" />
 
             <EditText
@@ -193,7 +191,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:ems="10"
-                android:hint="@string/masukkan_email"
+                android:inputType="textEmailAddress"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@+id/tv_email"
                 app:layout_constraintStart_toStartOf="@+id/tv_email"
                 app:layout_constraintTop_toBottomOf="@+id/tv_email" />
@@ -203,12 +202,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:alpha="0"
                 android:text="@string/password"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/tv_signup"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_register"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/tv_signup"
+                app:layout_constraintStart_toStartOf="@+id/tv_register"
                 app:layout_constraintTop_toBottomOf="@id/edt_email" />
 
             <EditText
@@ -216,11 +214,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:alpha="0"
-                android:hint="@string/pass_hint"
                 android:inputType="textPassword"
-                app:layout_constraintEnd_toEndOf="@+id/tv_signup"
-                app:layout_constraintStart_toStartOf="@+id/tv_signup"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_register"
+                app:layout_constraintStart_toStartOf="@+id/tv_register"
                 app:layout_constraintTop_toBottomOf="@+id/tv_password" />
 
             <TextView
@@ -228,12 +225,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:alpha="0"
                 android:text="@string/kontak"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/tv_signup"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_register"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/tv_signup"
+                app:layout_constraintStart_toStartOf="@+id/tv_register"
                 app:layout_constraintTop_toBottomOf="@id/edt_password" />
 
             <EditText
@@ -243,21 +239,22 @@
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="phone"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@+id/tv_kontak"
                 app:layout_constraintStart_toStartOf="@+id/tv_kontak"
-                app:layout_constraintTop_toBottomOf="@+id/tv_kontak" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_kontak"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/btn_register"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="56dp"
-                android:alpha="0"
+                android:layout_marginTop="32dp"
                 android:backgroundTint="@color/green"
                 android:text="@string/register"
-                app:layout_constraintEnd_toEndOf="@+id/tv_signup"
+                app:layout_constraintEnd_toEndOf="@+id/tv_register"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/tv_signup"
+                app:layout_constraintStart_toStartOf="@+id/tv_register"
                 app:layout_constraintTop_toBottomOf="@id/edt_kontak" />
 
             <TextView
@@ -265,11 +262,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="64dp"
-                android:alpha="0"
                 android:text="@string/register_ket"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/tv_signup"
+                app:layout_constraintStart_toStartOf="@+id/btn_register"
                 app:layout_constraintTop_toBottomOf="@+id/btn_register" />
 
             <TextView
@@ -277,12 +271,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginBottom="64dp"
-                android:alpha="0"
                 android:text="@string/login"
                 android:textColor="@color/aqua"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/tv_signup"
+                app:layout_constraintEnd_toEndOf="@+id/btn_register"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/tv_ket"
                 app:layout_constraintTop_toTopOf="@+id/tv_ket" />
 
@@ -292,7 +284,7 @@
                 android:layout_height="64dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintGuide_percent="0.30"
+                app:layout_constraintGuide_percent="0.14"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -301,7 +293,7 @@
                 android:layout_height="64dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintGuide_percent="0.05"
+                app:layout_constraintGuide_percent="0.01"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
@@ -316,6 +308,4 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
