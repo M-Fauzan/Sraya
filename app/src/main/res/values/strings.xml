@@ -26,6 +26,7 @@
     <string name="ok">Ok</string>
     <string name="hint_chat">Ketik permasalahan Anda</string>
     <string name="form_report_add_photo">+ Foto</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est lorem ipsum dolor sit amet consectetur adipiscing elit.</string>
 
     <!-- Login and Register texts -->
     <string name="login">Login</string>
@@ -53,5 +54,6 @@
     <string name="logout">Logout</string>
     <string name="btnlogin">LOGIN</string>
     <string name="ketlogin">Belum Memiliki Akun ?</string>
-
+    <string name="laki_laki">Laki-Laki</string>
+    <string name="perempuan">Perempuan</string>
 </resources>

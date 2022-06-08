@@ -4,6 +4,8 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.dicoding.fauzan.sraya.databinding.ActivityLoginBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -73,8 +75,55 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLoginGoogle.setOnClickListener {
             signInLauncher.launch(googleSignInClient.signInIntent)
         }
+
+        binding.btnLogin.setOnClickListener {
+            val email = binding.edtEmaillogin.text.toString()
+            val nohp = binding.edtNohp.text.toString()
+            val password = binding.edtPasswd.text.toString()
+
+            if (email.isEmpty()){
+                binding.edtEmaillogin.error = "Email Harus Diisi!"
+                binding.edtEmaillogin.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                binding.edtEmaillogin.error = "Email Tidak Valid!"
+                binding.edtEmaillogin.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (nohp.isEmpty()){
+                binding.edtNohp.error = "No Handphone Harus Diisi!"
+                binding.edtNohp.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (password.isEmpty()){
+                binding.edtPasswd.error = "Password Harus Diisi!"
+                binding.edtPasswd.requestFocus()
+                return@setOnClickListener
+            }
+
+            LoginFirebase(email,password,nohp)
+        }
+
+
     }
 
+    private fun LoginFirebase(email: String, password: String, nohp: String) {
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this){
+                if (it.isSuccessful){
+                    Toast.makeText(this, "Selamat Datang $email", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this,HomeActivity::class.java)
+                    startActivity(intent)
+                }
+                else{
+                    Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
 
 
     override fun onStart() {

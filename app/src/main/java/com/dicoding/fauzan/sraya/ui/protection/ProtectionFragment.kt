@@ -5,6 +5,7 @@ import android.app.Activity.RESULT_CANCELED
 import android.app.Activity.RESULT_OK
 import android.content.IntentSender
 import android.content.pm.PackageManager
+import android.location.Geocoder
 import android.os.Bundle
 import android.os.Looper
 import android.util.Log
@@ -43,6 +44,8 @@ class ProtectionFragment : Fragment(), OnMapReadyCallback {
     private var isReady = false
     private var _binding: FragmentProtectionBinding? = null
     private lateinit var database: FirebaseFirestore
+    private lateinit var locationCoordinates: LatLng
+
     private var requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()) {
         when {
@@ -114,6 +117,8 @@ class ProtectionFragment : Fragment(), OnMapReadyCallback {
             // TODO: Replace value with the corresponding data type from Firestore
 
 
+            val geocoder = Geocoder(requireActivity())
+                .getFromLocation(locationCoordinates.latitude, locationCoordinates.longitude, 5)
 
             val location = hashMapOf(
                 "GPS" to "0",
@@ -218,7 +223,7 @@ class ProtectionFragment : Fragment(), OnMapReadyCallback {
             override fun onLocationResult(locationResult: LocationResult) {
                 val lastLocation = locationResult.lastLocation
                 val latLng = LatLng(lastLocation.latitude, lastLocation.longitude)
-
+                locationCoordinates = latLng
                 Log.d(TAG, latLng.latitude.toString())
                 Log.d(TAG, latLng.longitude.toString())
 
